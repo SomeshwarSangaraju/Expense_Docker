@@ -6,7 +6,7 @@ resource "aws_instance" "expense" {
 
   # security_groups = aws_security_group.docker
 
-  iam_instance_profile = aws_iam_instance_profile.docker.name
+  # iam_instance_profile = aws_iam_instance_profile.docker.name
 
    root_block_device {
         volume_size = 50
@@ -22,10 +22,10 @@ resource "aws_instance" "expense" {
   )
 }
 
-resource "aws_iam_instance_profile" "docker" {
-  name = "expenseDocker"
-  role = "BastionTerraformAdmin"
-}
+# resource "aws_iam_instance_profile" "docker" {
+#   name = "expenseDocker"
+#   role = "BastionTerraformAdmin"
+# }
 
 # resource "aws_security_group" "docker" {
 
